@@ -21,6 +21,10 @@ cd nh-obs
 export PATH="${PWD}:${PATH}"
 ```
 
+```bash
+docker build -t joe-opensrc/nethack .
+```
+
 ### USAGE
 ___
 

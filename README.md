@@ -8,6 +8,9 @@ Not perfect but useful enough for my purposes.
 It makes an assumption that nethack \
 is installed in the following location: /var/games/nethack
 
+I'm making a Dockerfile (WIP) to use alpine to install nethack \ 
+and guarantee the installation directory.  I'll try and upload it later...
+
 ### USAGE
 
 `nh-obs.sh -d hack-1a`

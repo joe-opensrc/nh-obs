@@ -7,3 +7,17 @@ Not perfect but useful enough for my purposes.
 
 It makes an assumption that nethack \
 is installed in the following location: /var/games/nethack
+
+### USAGE
+
+`nh-obs.sh -d hack-1a`
+
+e.g., \
+```bash
+> nh-obs.sh -d hack-1a
+
+It's too dark to find the hackdir! "hack-1a"
+read an uncursed scroll of create directory? [Y/n]
+You read an uncursed scroll of create directory.
+Now re-cast this script to enter the maze.
+```

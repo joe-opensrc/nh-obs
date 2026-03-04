@@ -13,7 +13,7 @@ OPTIONS=splash_screen
 OPTIONS=altmeta
 #OPTIONS=selectsaved
 
-OPTIONS=role:wizard,race:elf,align:cha,gender:fem,pettype=cat
+# OPTIONS=role:wizard,race:elf,align:cha,gender:fem,pettype=cat
 #OPTIONS=role:wizard,race:orc,align:cha,gender:fem,pettype=horse
 # OPTIONS=role:priestess,race:elf,align:cha,gender:fem,pettype=cat
 #OPTIONS=role:monk,race:hum,align:neu,gender:mal,pettype=none

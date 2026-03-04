@@ -44,5 +44,5 @@ or perhaps:
 
 ```bash
 > nh-obs.sh -d hack-1a
-> docker run -v ./hack-1a:/opt/nethack -it joe-opensrc/nethack
+> docker run --rm -v ./hack-1a:/opt/nethack -it joe-opensrc/nethack
 ```

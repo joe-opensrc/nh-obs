@@ -1,33 +1,180 @@
-#
-# System-wide NetHack configuration file for tty-based NetHack.
-#
+# NetHack config file 
+ 
+WIZKIT=wizkit.txt
+ 
+# OPTIONS=role:wizard,race:elf,align:cha,gender:fem,pettype=cat
+# OPTIONS=role:wizard,race:orc,align:cha,gender:fem,pettype=horse
+# OPTIONS=role:priestess,race:elf,align:cha,gender:fem,pettype=cat
+OPTIONS=role:priestess,race:hum,align:law,gender:*,pettype=none
+# OPTIONS=role:monk,race:hum,align:neu,gender:*,pettype=cat
 
-#OPTIONS=windowchain:+trace
+OPTIONS=fruit:potato
+OPTIONS=safe_pet,dogname:Gaspode,catname:Greebo,horsename:Binky
+
 OPTIONS=windowtype:curses
 # OPTIONS=windowtype:tty
+# OPTIONS=windowchain:+trace
 
-OPTIONS=!bones
-OPTIONS=splash_screen
-
-# WIZKIT=~/.nethack/wizkit.txt
-OPTIONS=altmeta
+# OPTIONS=!bones
+# OPTIONS=splash_screen
 #OPTIONS=selectsaved
-
-# OPTIONS=role:wizard,race:elf,align:cha,gender:fem,pettype=cat
-#OPTIONS=role:wizard,race:orc,align:cha,gender:fem,pettype=horse
-# OPTIONS=role:priestess,race:elf,align:cha,gender:fem,pettype=cat
-#OPTIONS=role:monk,race:hum,align:neu,gender:mal,pettype=none
+OPTIONS=altmeta
 
 OPTIONS=DECgraphics
-OPTIONS=fullscreen
-#OPTIONS=lit_corridor
-OPTIONS=force_invmenu
-
-OPTIONS=menu_headings:dim
-# OPTIONS=perm_invent
-OPTIONS=nomenu_overlay
 OPTIONS=color
-OPTIONS=msg_window:reversed
+
+OPTIONS=!news,!mail,!cmdassist
+OPTIONS=!toptenwin
+OPTIONS=tombstone
+
+# OPTIONS=msg_window:reversed
+# OPTIONS=msghistory:60
+
+OPTIONS=align_message:top
+OPTIONS=align_status:bottom
+
+OPTIONS=showexp
+OPTIONS=showscore
+OPTIONS=hitpointbar
+
+OPTIONS=perm_invent
+OPTIONS=force_invmenu
+OPTIONS=menu_headings:dim
+OPTIONS=!implicit_uncursed
+OPTIONS=fixinv
+
+# tty only 
+# OPTIONS=nomenu_overlay
+ 
+# OPTIONS=!sparkle
+# OPTIONS=!timed_delay
+OPTIONS=verbose
+OPTIONS=lit_corridor
+OPTIONS=autodescribe
+OPTIONS=boulder:0
+OPTIONS=!mention_walls
+# OPTIONS=hilite_hidden_stairs
+OPTIONS=runmode:teleport
+#OPTIONS=standout 
+
+OPTIONS=sortloot:full
+OPTIONS=sortpack
+OPTIONS=packorder:")[%?+!=/(*`0_
+
+OPTIONS=autopickup
+OPTIONS=pickup_types:$?!/=
+OPTIONS=pickup_burden:Unencumbered
+
+# one day ;)
+AUTOPICKUP_EXCEPTION=">Amulet of Yendor"
+AUTOPICKUP_EXCEPTION="<Amulet of Yendor named"
+
+AUTOPICKUP_EXCEPTION=">scroll .* scare monster"
+
+AUTOPICKUP_EXCEPTION="<uncursed .* ration"
+
+MSGTYPE=hide "Unknown command ' '."
+MSGTYPE=hide "You wipe out the message that was written in the dust here."
+MSGTYPE=hide "You write in the dust"
+MSGTYPE=hide "You try to feel"
+MSGTYPE=hide "You start digging.  You hit the rock with all your might."
+MSGTYPE=hide "You .* open the .*"
+MSGTYPE=hide "You swap places with .*"
+# MSGTYPE=norep "You stop.  .* is in the way!"
+MSGTYPE=stop "You feel more confident in"
+MSGTYPE=stop "You feel you could be more dangerous!"
+MSGTYPE=hide "The .* unicorn gratefully accepts"
+# MSGTYPE=hide "You feel .*"
+# MSGTYPE=hide "You're already as .*"
+
+# from the wiki:
+
+# delayed instadeaths
+MSGTYPE=stop "The .* (grabs|swings itself around) you!"
+MSGTYPE=stop "You don't feel very well."
+MSGTYPE=stop "You are turning a little green."
+MSGTYPE=stop "Your limbs are getting oozy."
+MSGTYPE=stop "Your skin begins to peel away."
+MSGTYPE=stop "You are turning into a green slime."
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "Your limbs are stiffening."
+MSGTYPE=stop "It constricts your throat!"
+MSGTYPE=stop "You find it hard to breathe."
+MSGTYPE=stop "You're gasping for air."
+MSGTYPE=stop "Your blood is having trouble reaching your brain."
+MSGTYPE=stop "You can no longer breathe."
+MSGTYPE=stop "You're turning blue."
+MSGTYPE=stop "Your consciousness is fading."
+MSGTYPE=stop "You feel deathly sick."
+MSGTYPE=stop "You feel (much|even) worse."
+
+# Things that aren't dangerous by themselves but could kill you if you don't notice.
+MSGTYPE=stop "You fail to cast the spell correctly."
+MSGTYPE=stop "You see here a c(hi|o)ckatrice corpse." 
+MSGTYPE=stop "You are beginning to feel weak."
+
+# Don't speed past wrest message when wresting
+MSGTYPE=stop "You wrest .*"
+
+# Don't miss the vibrating square
+MSGTYPE=stop "You feel a strange vibration under your *."
+MSGTYPE=stop "You feel a strange vibration beneath you."
+
+#
+# Some sane menucolor defaults
+#
+
+OPTIONS=menucolors
+MENUCOLOR=" blessed "=green
+MENUCOLOR=" holy "=green
+MENUCOLOR=" uncursed "=yellow
+MENUCOLOR=" cursed "=red
+MENUCOLOR=" unholy "=red
+MENUCOLOR=" cursed .* (being worn)"=orange&underline
+
+## Use status hilites
+OPTIONS=statushilites:6
+  
+OPTIONS=hilite_status:condition/minor_troubles/orange
+
+OPTIONS=hilite_status:condition/major_troubles/red
+
+# HP
+OPTIONS=hilite_status:hitpoints/100%/green&normal
+OPTIONS=hilite_status:hitpoints/<100%/green&normal
+OPTIONS=hilite_status:hitpoints/<66%/yellow&normal
+OPTIONS=hilite_status:hitpoints/<50%/orange&normal
+OPTIONS=hilite_status:hitpoints/<33%/red&bold
+OPTIONS=hilite_status:hitpoints/<15%/red&inverse
+## Pw
+OPTIONS=hilite_status:power/100%/green&normal
+OPTIONS=hilite_status:power/<100%/green&normal
+OPTIONS=hilite_status:power/<66%/yellow&normal
+OPTIONS=hilite_status:power/<50%/orange&normal
+OPTIONS=hilite_status:power/<33%/red&bold
+
+# Carry
+OPTIONS=hilite_status:cap/burdened/yellow/stressed/orange/strained/red&bold/overtaxed/red&inverse/overloaded/red&inverse&blink
+
+# Hunger
+OPTIONS=hilite_status:hunger/satiated/yellow/hungry/orange/weak/red&bold/fainting/red&inverse/fainted/red&inverse&blink
+
+# Mental
+OPTIONS=hilite_status:condition/hallu/yellow
+OPTIONS=hilite_status:condition/conf/orange
+OPTIONS=hilite_status:condition/stun/red&bold
+
+# Health
+# OPTIONS=hilite_status:condition/termill/red&inverse
+# OPTIONS=hilite_status:condition/foodpois/red&inverse
+# OPTIONS=hilite_status:condition/slime/red&inverse
+
+# Str, Con, Dex, Int, Wis, Cha
+OPTIONS=hilite_status:characteristics/up/green/down/red
+
+# gold
+OPTIONS=hilite_status:gold/up/yellow/down/brown
+
 
 BIND=v:loot
 BIND={:herecmdmenu
@@ -35,7 +182,8 @@ BIND=}:therecmdmenu
 BIND=@:prevmsg
 BIND=g:run
 BIND=G:rush
-BIND=-:travel
+# BIND=-:travel
+BIND=-:look
 BIND=w:wear
 BIND=W:wield
 BIND=t:takeoff
@@ -46,120 +194,3 @@ BIND=P:pay
 BIND=r:remove
 BIND=R:read
 #BIND=^-:redo
-
-OPTIONS=msghistory:60
-
-#OPTIONS=standout 
-MSGTYPE=hide "Unknown command ' '."
-MSGTYPE=hide "You wipe out the message that was written in the dust here."
-MSGTYPE=hide "You write in the dust"
-MSGTYPE=hide "You try to feel"
-MSGTYPE=hide "You start digging.  You hit the rock with all your might."
-MSGTYPE=hide "You * open the .*"
-MSGTYPE=hide "You swap places with Greebo."
-MSGTYPE=stop "You feel more confident in"
-MSGTYPE=stop "You feel you could be more dangerous!"
-
-MSGTYPE=hide "The * unicorn gratefully accepts"
-MSGTYPE=hide "You feel .*"
-MSGTYPE=hide "You're already as .*"
-
-# OPTIONS=hitpointbar
-#OPTIONS=ascii_map
-
-# OPTIONS=hilite_hidden_stairs
-
-
-OPTIONS=autodescribe,mention_walls
-
-OPTIONS=pickup_burden:Unencumbered
-OPTIONS=!implicit_uncursed
-
-OPTIONS=!toptenwin
-#,
-OPTIONS=fixinv,sortpack,packorder:")[%?+!=/(*`0_
-
-OPTIONS=tombstone,!cmdassist
-OPTIONS=!news,!mail
-
-OPTIONS=verbose,fruit:potato
-#OPTIONS=safe_pet,pettype:none,dogname:Fido,catname:Rex,horsename:Binky
-OPTIONS=safe_pet,dogname:Gaspode,catname:Greebo,horsename:Binky
-
-OPTIONS=pickup_types:$
-OPTIONS=boulder:0
-OPTIONS=showexp
-
-
-OPTIONS=!sparkle
-OPTIONS=runmode:teleport
-OPTIONS=!timed_delay
-
-# display
-OPTIONS=showscore
-OPTIONS=time
-OPTIONS=!legacy
-# OPTIONS=suppress_alert:3.4.3
-
-
-# Enable this if you want to see your inventory sorted in alphabetical
-# order by item instead of by index letter:
-# OPTIONS=sortloot:full
-# or if you just want containers sorted:
-# OPTIONS=sortloot:loot
-
-#
-# Some sane menucolor defaults
-#
-
-OPTIONS=menucolors
-MENUCOLOR=" blessed "=green
-MENUCOLOR=" holy "=green
-MENUCOLOR=" uncursed "=brown
- #yellow
-MENUCOLOR=" cursed "=red
-MENUCOLOR=" unholy "=red
-MENUCOLOR=" cursed .* (being worn)"=orange&underline
-
-## Use status hilites
-OPTIONS=statushilites:6
-#OPTIONS=statushilites:10
-#OPTIONS=hilite_status:condition/minor_troubles/orange
-#OPTIONS=hilite_status:field/trigger/color[&attributes]
-#OPTIONS=hilite_status:field/trigger/color[&attributes]
-#OPTIONS=hilite_status:field/trigger/color[&attributes]/trigger2/color2[&attributes2]/trigger3[&attributes3]/...   
-#
-# HP
-OPTIONS=hitpointbar
-#OPTIONS=hilite_status:hitpoints/100%/grey&normal
-OPTIONS=hilite_status:hitpoints/100%/green&normal
-OPTIONS=hilite_status:hitpoints/<100%/green&normal
-OPTIONS=hilite_status:hitpoints/<66%/yellow&normal
-OPTIONS=hilite_status:hitpoints/<50%/orange&normal
-OPTIONS=hilite_status:hitpoints/<33%/red&bold
-OPTIONS=hilite_status:hitpoints/<15%/red&inverse
-## Pw
-OPTIONS=hilite_status:power/100%/grey&normal
-OPTIONS=hilite_status:power/<100%/green&normal
-OPTIONS=hilite_status:power/<66%/yellow&normal
-OPTIONS=hilite_status:power/<50%/orange&normal
-OPTIONS=hilite_status:power/<33%/red&bold
-## Carry
-OPTIONS=hilite_status:cap/burdened/yellow/stressed/orange/strained/red&bold/overtaxed/red&inverse/overloaded/red&inverse&blink
-## Hunger
-OPTIONS=hilite_status:hunger/satiated/yellow/hungry/orange/weak/red&bold/fainting/red&inverse/fainted/red&inverse&blink
-## Mental
-OPTIONS=hilite_status:condition/hallu/yellow
-OPTIONS=hilite_status:condition/conf/orange
-OPTIONS=hilite_status:condition/stun/red&bold
-## Health
-OPTIONS=hilite_status:condition/termill/red&inverse
-OPTIONS=hilite_status:condition/foodpois/red&inverse
-OPTIONS=hilite_status:condition/slime/red&inverse
-# Str, Con, Dex, Int, Wis, Cha
-OPTIONS=hilite_status:characteristics/up/green/down/red
-# gold
-OPTIONS=hilite_status:gold/up/yellow/down/brown
-
-
-

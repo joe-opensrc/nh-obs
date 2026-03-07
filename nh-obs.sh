@@ -8,6 +8,15 @@ OPTIND=1 OPTARG="" OPTERR=0
 
 hdir_short="hackdir";
 
+usg="
+  $( basename ${0} ) [-b] -d <hackdir> [-u <name>]
+"
+if [[ ${#} -eq 0 ]]
+then
+  echo "${usg}" >&2
+  exit 0
+fi
+
 while getopts 'bd:u:' flag
 do
   case "${flag}" in

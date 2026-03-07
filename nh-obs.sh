@@ -57,11 +57,13 @@ function build(){
 
   # make base64?
   mkdir -p "${hdir}"/{bones,save,level,lock,trouble}
-  cp "$( realpath $( dirname ${0} ) )"/dot-nethackrc "${hdir}"/
+  cp "$( realpath $( dirname ${0} ) )"/{dot-nethackrc,wizkit} "${hdir}"/ &>/dev/null
   cp /var/games/nethack/{nhdat,symbols,sysconf,license} "${hdir}"/
 
   cd "${hdir}"
   touch perm logfile xlogfile
+  # yolo enable wizard-mode
+  sed -i -e "s/^WIZARDS=\(.*\)/WIZARDS=\1 ${nhuser}/" "${hdir}"/sysconf
   echo "Now re-cast this script to enter the maze." >&2
   run=1
 }

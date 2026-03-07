@@ -4,7 +4,6 @@ nhuser="fubinax"
 
 build=0 # enum
 run=0 # bool
-OPTIND=1 OPTARG="" OPTERR=0
 
 hdir_short="hackdir";
 
@@ -17,6 +16,7 @@ then
   exit 0
 fi
 
+OPTIND=1 OPTARG="" OPTERR=0
 while getopts 'bd:u:' flag
 do
   case "${flag}" in

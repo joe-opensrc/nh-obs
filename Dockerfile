@@ -1,7 +1,7 @@
 FROM alpine:3.23.3
 
 ARG UID=1000
-ARG USER=gorviblax
+ARG USER=fubinax
 
 RUN /sbin/apk update 
 RUN /sbin/apk add bash nethack

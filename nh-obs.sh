@@ -24,8 +24,9 @@ do
     d)  hdir_short="${OPTARG}";;
     u)  nhuser="${OPTARG}";;
   esac
-  shift $(( ${OPTIND} - 1 ))
 done
+# getopts wierdness!
+shift $(( ${OPTIND} - 2 ))
 
 if [[ -z "${hdir_short}" ]]
 then

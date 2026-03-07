@@ -21,6 +21,9 @@ RUN cp /var/games/nethack/nhdat \
 
 RUN touch perm logfile xlogfile
 
+# yolo
+RUN sed -i -e "s/WIZARDS=root games/WIZARDS=root games ${USER}/" /opt/nethack/sysconf
+
 RUN chown -R "${USER}":"${USER}" "${HDIR}"/
 
 USER ${USER}

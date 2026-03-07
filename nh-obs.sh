@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nhuser="gorviblax"
+nhuser="fubinax"
 
 build=0 # enum
 run=0 # bool

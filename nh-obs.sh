@@ -5,7 +5,7 @@ nhuser="fubinax"
 build=0 # enum
 run=0 # bool
 
-hdir_short="hackdir";
+hdir_short="";
 
 usg="
   $( basename ${0} ) [-b] -d <hackdir> [-u <name>]
@@ -27,6 +27,11 @@ do
   shift $(( ${OPTIND} - 1 ))
 done
 
+if [[ -z "${hdir_short}" ]]
+then
+  echo 'You must...dungeon location'
+  exit 1
+fi
 hdir="$( realpath "${hdir_short}" )"
 
 function build(){

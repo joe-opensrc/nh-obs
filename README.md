@@ -18,7 +18,7 @@ ___
 ```bash
 git clone https://github.com/joe-opensrc/nh-obs.git 
 cd nh-obs
-export PATH="${PWD}:${PATH}"
+export PATH="${PWD}/bin:${PATH}"
 ```
 
 ```bash

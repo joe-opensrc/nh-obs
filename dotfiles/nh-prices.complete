@@ -1,0 +1,15 @@
+#!/bin/bash
+
+_nh-prices(){
+  # local confdir=~/.config/nethack
+  local cur prev words cword;
+  _init_completion || return;
+
+  case "${prev}" in
+    "nh-prices.sh") COMPREPLY=( -i );;
+    "-i") COMPREPLY=(
+            $( compgen -W "$( nh-prices.sh -C )" -- ${cur} ) );;
+  esac
+}
+
+complete -F _nh-prices nh-prices.sh 

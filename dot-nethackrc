@@ -85,8 +85,11 @@ MSGTYPE=hide "You swap places with .*"
 MSGTYPE=stop "You feel more confident in"
 MSGTYPE=stop "You feel you could be more dangerous!"
 MSGTYPE=hide "The .* unicorn gratefully accepts"
+# perhaps too broad?
+MSGTYPE=hide "There is an * here, loot it?"
 # MSGTYPE=hide "You feel .*"
 # MSGTYPE=hide "You're already as .*"
+MSGTYPE=norep "You fail to cast the spell correctly."
 
 # from the wiki:
 

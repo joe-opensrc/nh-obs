@@ -1,0 +1,562 @@
+classes:
+  tools:
+    - names: ["oil_lamp"]
+      sell: [ 5 ]
+      buy:
+        base: 10
+    - names: ["magic_lamp"]
+      sell: [ 19, 25 ]
+      buy:
+       base: 50
+
+  cloaks:
+    - names: [ "mummy_wrapping" ]
+      sell: [ 1, 1 ]
+      buy:
+        base: 2
+        cha:
+          - [ 10, 13, 18 ]
+          - [  8, 10, 13 ]
+          - [  7,  9, 12 ]
+          - [  5,  7,  9 ]
+          - [  4,  5,  7 ]
+          - [  3,  4,  6 ]
+          - [  3,  3,  4 ]
+
+    - names: [ "leather", "orcish ('coarse mantelet')" ]
+      sell: [ 15, 20 ]
+      buy:
+        base: 40
+        cha:
+          - [ 80, 107, 142 ]
+          - [ 60,  80, 107 ]
+          - [ 53,  71,  95 ]
+          - [ 40,  53,  71 ]
+          - [ 30,  40,  53 ]
+          - [ 27,  36,  47 ]
+          - [ 20,  27,  36 ]
+
+    - names: [ "alchemy_smock ('apron')", "displacement", "dwarvish ('hooded cloak')", "oilskin ('slippery cloak')", "protection", "robe ('robe')" ]
+      sell: [ 19, 25 ]
+      buy:
+        base: 50
+        cha:
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+          - [  38,  50,  67 ]
+          - [  33,  44,  59 ]
+          - [  25,  33,  44 ]
+
+    - names: ["elven ('faded pall')", "invisibility", "magic_resistance" ]
+      sell: [ 23, 30 ]
+      buy:
+        base: 60
+        cha:
+          - [ 120, 160, 213 ]
+          - [  90, 120, 160 ]
+          - [  80, 107, 142 ]
+          - [  60,  80, 107 ]
+          - [  45,  60,  80 ]
+          - [  40,  53,  71 ]
+          - [  30,  40,  53 ]
+
+  boots:
+    - names: [ "eleven", "kicking" ]
+      sell: [ 3, 4 ]
+      buy:
+        base: 8
+        cha:
+          - [ 16, 21, 28 ]
+          - [ 12, 16, 21 ]
+          - [ 11, 14, 19 ]
+          - [  8, 11, 14 ]
+          - [  6,  8, 11 ]
+          - [  5,  7,  9 ]
+          - [  4,  5,  7 ]
+
+
+    - names: [ "fumble", "levitation" ]
+      sell: [ 12, 15 ]
+      buy:
+        base: 30
+        cha:
+          - [ 60, 80, 106 ]
+          - [ 45, 60,  79 ]
+          - [ 40, 53,  70 ]
+          - [ 30, 40,  53 ]
+          - [ 23, 30,  40 ]
+          - [ 20, 27,  36 ]
+          - [ 15, 20,  26 ]
+
+    - names: [ "jumping", "speed", "water_walking" ]
+      sell: [ 19, 25 ]
+      buy:
+        base: 50
+        cha:
+          - [ 100, 132, 176 ]
+          - [  75,  99, 132 ]
+          - [  66,  88, 117 ]
+          - [  50.  66,  88 ]
+          - [  38,  50,  66 ]
+          - [  34,  55,  59 ]
+          - [  25,  33,  44 ]
+
+
+  scrolls:
+    - names: ["identify"]
+      sell: [ 8, 10 ]
+      buy:
+        base: 20
+        cha:
+          - [ 40, 53, 71 ]
+          - [ 30, 40, 53 ]
+          - [ 27, 36, 47 ]
+          - [ 20, 27, 36 ]
+          - [ 15, 20, 27 ]
+          - [ 13, 18, 24 ]
+          - [ 10, 13, 18 ]
+
+    - names: ["light"]
+      sell: [ 19, 25 ]
+      buy:
+        base: 50
+        cha:
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+          - [  38,  50,  67 ]
+          - [  33,  44,  59 ]
+          - [  25,  33,  44 ]
+
+    - names: [ "blank", "enchant_weapon" ]
+      sell: [ 23, 30 ]
+      buy:
+        base: 60
+        cha:
+          - [ 120, 160, 213 ]
+          - [  90, 120, 160 ]
+          - [  80, 107, 142 ]
+          - [  60,  80, 107 ]
+          - [  45,  60,  80 ]
+          - [  40,  53,  71 ]
+          - [  30,  40,  53 ]
+
+    - names: [ "enchant_armor", "remove_curse" ]
+      sell: [ 30, 40 ]
+      buy:
+        base: 80
+        cha:
+          - [ 160, 213, 284 ]
+          - [ 120, 160, 213 ]
+          - [ 107, 142, 190 ]
+          - [  80, 107, 142 ]
+          - [  60,  80, 107 ]
+          - [  53,  71,  95 ]
+          - [  40,  53,  71 ]
+
+    - names: [ "confuse_monster", "destroy_armor", "fire", "food_detection", "gold_detection", "magic_mapping", "scare_monster", "teleportation" ]
+      sell: [ 38, 50 ]
+      buy:
+        base: 100
+        cha:
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+
+    - names: [ "amnesia", "create_monster", "earth", "taming" ]
+      sell: [ 75, 100 ]
+      buy:
+        base: 200
+        cha:
+          - [ 400, 533, 711 ]
+          - [ 300, 400, 533 ]
+          - [ 267, 356, 474 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+
+
+    - names: [ "charging", "genocide", "punishment", "stinking_cloud" ]
+      sell: [ 113, 150 ]
+      buy:
+        base: 300
+        cha:
+          - [ 600, 800, 1067 ]
+          - [ 450, 600,  800 ]
+          - [ 400, 533,  711 ]
+          - [ 300, 400,  533 ]
+          - [ 225, 300,  400 ]
+          - [ 200, 267,  356 ]
+          - [ 150, 200,  267 ]
+
+  potions:
+    - names: [ "water" ]
+      sell: [ 0, 0 ]
+      buy:
+        base: 0
+        cha:
+          - [ 10, 13, 18 ]
+          - [  8, 10, 13 ]
+          - [  7,  9, 12 ]
+          - [  5,  7,  9 ]
+          - [  4,  5,  7 ]
+          - [  3,  4,  6 ]
+          - [  3,  3,  4 ]
+
+
+    - names: [ "booze", "fruit_juice", "see_invisible", "sickness" ]
+      sell: [ 19, 25 ]
+      buy:
+        base: 50
+        cha:
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+          - [  38,  50,  67 ]
+          - [  33,  44,  59 ]
+          - [  25,  33,  44 ]
+
+
+    - names: [ "confusion", "extra_healing", "hallucination", "healing", "holy_water", "unholy_water", "restore_ability", "sleeping" ]
+      sell: [ 38, 50 ]
+      buy:
+        base: 100
+        cha:
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+
+
+    - names: [ "blindness", "gain_energy", "invisibility", "monster_detection", "object_detection" ]
+      sell: [ 56, 75 ]
+      buy:
+        base: 150
+        cha:
+          - [ 300, 400, 533 ]
+          - [ 225, 300, 400 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 113, 150, 200 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+
+
+
+    - names: [ "enlightenment", "full_healing", "levitation", "polymorph", "speed" ]
+      sell: [ 75, 100 ]
+      buy:
+        base: 200
+        cha:
+          - [ 400, 533, 711 ]
+          - [ 300, 400, 533 ]
+          - [ 267, 356, 474 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+
+
+    - names: [ "acid", "oil" ]
+      sell: [ 94, 125 ]
+      buy:
+        base: 250
+        cha:
+          - [ 500, 667, 889 ]
+          - [ 375, 500, 667 ]
+          - [ 333, 444, 593 ]
+          - [ 250, 333, 444 ]
+          - [ 188, 250, 333 ]
+          - [ 167, 222, 296 ]
+          - [ 125, 167, 222 ]
+
+    - names: [ "gain_ability", "gain_level", "paralysis" ]
+      sell: [ 113, 150 ]
+      buy:
+        base: 300
+        cha:
+          - [ 600, 800, 1067 ]
+          - [ 450, 600,  800 ]
+          - [ 400, 533,  711 ]
+          - [ 300, 400,  533 ]
+          - [ 225, 300,  400 ]
+          - [ 200, 267,  356 ]
+          - [ 150, 200,  267 ]
+
+  rings:
+    - names: [ "adornment", "hunger", "protection", "protection_from_shape_changers", "stealth", "sustain_ability", "warning" ]
+      sell: [ 38, 50 ]
+      buy:
+        base: 100
+        cha:
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+      
+
+    - names: [ "aggravate_monster", "cold_resistance", "gain_constitution", "gain_strength", "increase_accuracy", "increase_damage", "invisibility", "poison_resistance", "see_invisible", "shock_resistance" ]
+      sell: [ 56, 75 ]
+      buy:
+        base: 150
+        cha:
+          - [ 300, 400, 533 ]
+          - [ 225, 300, 400 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 113, 150, 200 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+     
+
+    - names: [ "fire_resistance", "free_action", "levitation", "regeneration", "searching", "slow_digestion", "teleportation" ]
+      sell: [ 75, 100 ]
+      buy:
+        base: 200
+        cha:
+          - [ 400, 533, 711 ]
+          - [ 300, 400, 533 ]
+          - [ 267, 356, 474 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+      
+    - names: [ "conflict", "polymorph", "polymorph_control", "teleport_control" ]
+      sell: [ 113, 150 ]
+      buy:
+        base: 300
+        cha:
+          - [ 600, 800, 1067 ]
+          - [ 450, 600,  800 ]
+          - [ 400, 533,  711 ]
+          - [ 300, 400,  533 ]
+          - [ 225, 300,  400 ]
+          - [ 200, 267,  356 ]
+          - [ 150, 200,  267 ]
+  
+
+  wands:
+    - names: [ "light", "nothing" ]
+      sell: [ 38, 50 ]
+      buy:
+        base: 100
+        cha:
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+
+    - names: [ "digging", "enlightenment", "locking", "magic_missile", "make_invisible", "opening", "probing", "secret_door_detection", "slow_monster", "speed_monster", "striking", "undead_turning" ]
+      sell: [ 56, 75 ]
+      buy:
+        base: 150
+        cha:
+          - [ 300, 400, 533 ]
+          - [ 225, 300, 400 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 113, 150, 200 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+
+    - names: [ "cold", "fire", "lightning", "sleep" ]
+      sell: [ 66, 88 ]
+      buy:
+        base: 175
+        cha:
+          - [ 350, 567, 622 ]
+          - [ 263, 350, 467 ]
+          - [ 233, 311, 415 ]
+          - [ 175, 233, 311 ]
+          - [ 131, 175, 233 ]
+          - [ 117, 156, 207 ]
+          - [  88, 117, 156 ]
+      
+    - names: [ "cancellation", "create_monster", "polymorph", "teleportation" ]
+      sell: [ 75, 100 ]
+      buy:
+        base: 200
+        cha:
+          - [ 400, 533, 711 ]
+          - [ 300, 400, 533 ]
+          - [ 267, 356, 474 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+      
+    - names: [ "death", "wishing" ]
+      sell: [ 188, 250 ]
+      buy:
+        base: 500
+        cha:
+          - [ 1000, 1333, 1778 ]
+          - [  750, 1000, 1333 ]
+          - [  667,  889, 1185 ]
+          - [  500,  667,  889 ]
+          - [  375,  500,  667 ]
+          - [  333,  444,  593 ]
+          - [  250,  333,  444 ]
+
+  spellbooks:
+    - names: [ "force_bolt", "protection", "detect_monsters", "light", "sleep", "jumping", "healing", "knock" ]
+      sell: [ 38, 50 ]
+      buy:
+        base: 100
+        cha:
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+          - [  75, 100, 133 ]
+          - [  67,  89, 119 ]
+          - [  50,  67,  89 ]
+      
+    - names: [ "magic_missile", "drain_life", "create_monster", "detect_food", "confuse_monster", "slow_monster", "cure_blindness", "wizard_lock" ]
+      sell: [ 75, 100 ]
+      buy:
+        base: 200
+        cha:
+          - [ 400, 533, 711 ]
+          - [ 300, 400, 533 ]
+          - [ 267, 356, 474 ]
+          - [ 200, 267, 356 ]
+          - [ 150, 200, 267 ]
+          - [ 133, 178, 237 ]
+          - [ 100, 133, 178 ]
+      
+    - names: [ "remove_curse", "clairvoyance", "detect_unseen", "identify", "cause_fear", "charm_monster", "haste_self", "cure_sickness", "extra_healing", "stone_to_flesh" ]
+      sell: [ 113, 150 ]
+      buy:
+        base: 300
+        cha:
+          - [ 600, 800, 1067 ]
+          - [ 450, 600,  800 ]
+          - [ 400, 533,  711 ]
+          - [ 300, 400,  533 ]
+          - [ 225, 300,  400 ]
+          - [ 200, 267,  356 ]
+          - [ 150, 200,  267 ]
+
+    - names: [ "cone_of_cold", "fireball", "detect_treasure", "invisibility", "levitation", "restore_ability" ]
+      sell: [ 150, 200 ]
+      buy:
+        base: 400
+        cha:
+          - [ 800, 1067, 1422 ]
+          - [ 600,  800, 1067 ]
+          - [ 533,  711,  948 ]
+          - [ 400,  533,  711 ]
+          - [ 300,  400,  533 ]
+          - [ 267,  356,  474 ]
+          - [ 200,  267,  356 ]
+
+    - names: [ "magic_mapping", "dig" ]
+      sell: [ 188, 250 ]
+      buy:
+        base: 500
+        cha:
+          - [ 1000, 1333, 1778 ]
+          - [  750, 1000, 1333 ]
+          - [  667,  889, 1185 ]
+          - [  500,  667,  889 ]
+          - [  375,  500,  667 ]
+          - [  333,  444,  593 ]
+          - [  250,  333,  444 ]
+      
+    - names: [ "create_familiar", "turn_undead", "teleport_away", "polymorph" ]
+      sell: [ 225, 300 ]
+      buy:
+        base: 600
+        cha:
+          - [ 1200, 1600, 2133 ]
+          - [  900, 1200, 1600 ]
+          - [  800, 1067, 1422 ]
+          - [  600,  800, 1067 ]
+          - [  450,  600,  800 ]
+          - [  400,  533,  711 ]
+          - [  300,  400,  533 ]
+      
+    - names: [ "finger_of_death", "cancellation" ]
+      sell: [ 263, 350 ]
+      buy:
+        base: 700
+        cha:
+          - [ 1400, 1867, 2489 ]
+          - [ 1050, 1400, 1867 ]
+          - [  933, 1244, 1659 ]
+          - [  700,  933, 1233 ]
+          - [  525,  700,  933 ]
+          - [  467,  622,  830 ]
+          - [  350,  467,  622 ]
+
+
+# - names: [ ]
+#   sell: [ ]
+#   buy:
+#     base:
+#     cha:
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+  
+
+# - names: [ ]
+#   sell: [ ]
+#   buy:
+#     base:
+#     cha:
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+#       - [ ]
+
+
+charisma:
+  - index: 0
+    minimum: 1
+    maximum: 5
+  - index: 1
+    minimum: 6
+    maximum: 7
+  - index: 2
+    minimum: 8
+    maximum: 10
+  - index: 3
+    minimum: 11
+    maximum: 15
+  - index: 4
+    minimum: 16
+    maximum: 17
+  - index: 5
+    minimum: 18
+    maximum: 18
+  - index: 6
+    minimum: 19
+    maximum: 99

@@ -36,6 +36,7 @@ OPTIONS=align_status:bottom
 OPTIONS=showexp
 OPTIONS=showscore
 OPTIONS=hitpointbar
+OPTIONS=time
 
 OPTIONS=perm_invent
 OPTIONS=force_invmenu

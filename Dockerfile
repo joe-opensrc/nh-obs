@@ -10,7 +10,8 @@ RUN /usr/sbin/adduser -D -u ${UID} -s /bin/bash ${USER}
 
 ENV HDIR="/opt/nethack"
 WORKDIR "${HDIR}"
-COPY dot-nethackrc ${HDIR}/
+COPY conf/dot-nethackrc ${HDIR}/
+COPY conf/wizkit.txt ${HDIR}/
 
 
 RUN mkdir -p bones save level lock trouble

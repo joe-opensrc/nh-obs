@@ -3,6 +3,7 @@
 nhuser="fubinax"
 
 build=0 # enum
+rcfile=""
 run=0 # bool
 
 hdir_short="";
@@ -17,10 +18,11 @@ then
 fi
 
 OPTIND=1 OPTARG="" OPTERR=0
-while getopts 'bd:u:' flag
+while getopts 'bc:d:u:' flag
 do
   case "${flag}" in
     b)  build=2;;
+    c)  rcfile=${OPTARG};;
     d)  hdir_short="${OPTARG}";;
     u)  nhuser="${OPTARG}";;
   esac
@@ -73,7 +75,14 @@ then
   build=1
 fi
 
-export NETHACKOPTIONS=@"${hdir}/dot-nethackrc" \
+if [[ -n "${rcfile}" ]]
+then
+  nhrcf="${rcfile}"
+else
+  nhrcf="${hdir}/dot-nethackrc"
+fi
+
+export NETHACKOPTIONS=@"${nhrcf}" \
        NETHACKDIR="${hdir}" \
        LEVELDIR="${hdir}/level" \
        SAVEDIR="${hdir}/save" \

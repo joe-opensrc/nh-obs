@@ -47,3 +47,26 @@ or perhaps:
 > nh-obs.sh -d hack-1a
 > docker run --rm -v ./hack-1a:/opt/nethack -it joe-opensrc/nethack
 ```
+
+### USAGE for nh-prices.sh
+
+The stats are taken from: https://nethackwiki.com/wiki/Price_identification
+and are found in: bin/tables.yml
+
+They're for NetHack v3.6.7+.
+
+```
+# defaults to showing scroll sell-prices
+> nh-prices.sh -i scrolls 
+
+# show scrolls with sell-price of 8 zorkmids
+> nh-prices.sh -i scrolls -s 8
+{"names":["identify"],"prices":[8,10]}
+
+# shows all scroll buy-prices for 11 charisma 
+> nh-prices.sh -i scrolls -c 11 
+
+# shows scrolls that have buy-price 27 zorkmids
+> nh-prices.sh -i scrolls -c 11 -b 27
+{"names":["identify"],"pindex":1,"prices":[20,27,36]}
+```

@@ -32,7 +32,8 @@ shift $(( ${OPTIND} - 2 ))
 
 if [[ -z "${hdir_short}" ]]
 then
-  echo 'You must...dungeon location'
+  echo 'You must provide a location for the dungeon.' >&2
+  echo "${usg}"
   exit 1
 fi
 hdir="$( realpath "${hdir_short}" )"

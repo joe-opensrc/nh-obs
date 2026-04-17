@@ -20,6 +20,9 @@ ___
 git clone https://github.com/joe-opensrc/nh-obs.git 
 cd nh-obs
 export PATH="${PWD}/bin:${PATH}"
+
+# optionaly, bash completion for nh-prices.sh
+source dotfiles/nh-prices.complete 
 ```
 
 ```bash

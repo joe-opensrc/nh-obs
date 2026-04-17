@@ -59,7 +59,7 @@ function build(){
 
   # make base64?
   mkdir -p "${hdir}"/{bones,save,level,lock,trouble}
-  cp "$( realpath $( dirname ${0} ) )"/{dot-nethackrc,wizkit} "${hdir}"/ &>/dev/null
+  cp "$( dirname ${0} )"/../conf/{dot-nethackrc,wizkit.txt} "${hdir}"/ # &>/dev/null
   cp /var/games/nethack/{nhdat,symbols,sysconf,license} "${hdir}"/
 
   cd "${hdir}"

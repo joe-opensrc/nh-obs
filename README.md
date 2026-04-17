@@ -22,7 +22,7 @@ export PATH="${PWD}/bin:${PATH}"
 ```
 
 ```bash
-docker build -t joe-opensrc/nethack .
+docker build -t joe-opensrc/nethack:v3.6.7 .
 ```
 
 ### USAGE

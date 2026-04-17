@@ -7,10 +7,11 @@
     
     It makes an assumption that nethack
     is installed in the following location: /var/games/nethack
-    
-    I'm making a Dockerfile (WIP) to use alpine to install nethack 
-    and guarantee the installation directory.  I'll try and upload it later...
 
+    There's a self-contained Dockerfile / container version also.
+
+    Now with: nh-prices.sh
+    ( a script to help with price identification of items )
 
 ### INSTALL
 ___
@@ -35,7 +36,7 @@ e.g.,
 > nh-obs.sh -d hack-1a
 
 It's too dark to find the hackdir! "hack-1a"
-read an uncursed scroll of create directory? [Y/n]
+Read an uncursed scroll of create directory? [Y/n]
 You read an uncursed scroll of create directory.
 Now re-cast this script to enter the maze.
 ```

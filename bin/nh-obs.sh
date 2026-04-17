@@ -100,14 +100,5 @@ fi
 
 if [[ ${run} -eq 0 ]]
 then
-  # r=""
-  # if [[ -e ${hdir}/saves/*.gz ]]
-  # then 
-    # re="(re-)e"
-  # else
-    # re="E"
-  # fi
-  # echo -e "${re}nter the dungeons at: ${hdir_short}?\n(ctrl-c to abort)"
-  # read
   nethack -u "${nhuser}" "${@}"
 fi

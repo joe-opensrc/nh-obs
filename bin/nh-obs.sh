@@ -67,6 +67,8 @@ function build(){
   # yolo enable wizard-mode
   sed -i -e "s/^WIZARDS=\(.*\)/WIZARDS=\1 ${nhuser}/" "${hdir}"/sysconf
   echo "Now re-cast this script to enter the maze." >&2
+  nhrcf="${hdir}/dot-nethackrc"
+  [[ ! -r "${nhrcf}" ]] && echo "You might also want to create the config scroll: ${nhrcf}"
   run=1
 }
 

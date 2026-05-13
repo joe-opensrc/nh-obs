@@ -84,15 +84,17 @@ then
   names="names: ( .names - "${iclassFilter}" )"
 fi
 
+yqOutFilter="| select( .names != [] )"
 if [[ ${namesOnly} -eq 0 ]]
 then
   if [[ ${jqRaw} -eq 0 ]]
   then
-    yqOutFilter="| .names[]"
+    yqOutFilter=".names[]"
   else
-    yqOutFilter="| .names"
+    yqOutFilter=".names"
   fi
 fi
+
 
 yqFilter=".classes[${iclass}][] | { sell, ${names} }"
 

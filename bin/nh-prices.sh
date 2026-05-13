@@ -44,7 +44,7 @@ iclass_filter() {
 
 index=
 OPTIND=1 OPTARG="" OPTERR=0
-while getopts 'Cb:c:i:I:s:mnrj' flag
+while getopts 'Cb:c:f:i:I:s:mnrj' flag
 do
   case "${flag}" in
     C) yq -rc '.classes | keys[]' "${tfile}"; exit 0;;
@@ -52,6 +52,7 @@ do
     c) cha=${OPTARG};;
     i) iclass="\"${OPTARG}\"";;
     I) index=${OPTARG};;
+    f) iclassFilter="$( iclass_filter ${OPTARG} )";;
     j) jqArgs+=( -j ); jqFlat=1;;
     r) jqArgs+=( -r ); jqRaw=0;;
     n) namesOnly=0;; 

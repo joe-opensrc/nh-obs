@@ -171,8 +171,5 @@ sedcmd=
          -e 's/weapon/weap/g'
          -e 's/wizard/wiz/g'
   ) || sedcmd=( cat )
-# sed 
-#       -e 's/\(_...\)/\1/g' -e 's/[aeiou]//g' ) 
-# debug
-# set -x
+
 yq ${jqArgs[@]} -c "${yqFilter} ${yqOutFilter}" "${tfile}" | ${sedcmd[@]}

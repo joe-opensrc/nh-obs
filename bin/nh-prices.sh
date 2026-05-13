@@ -14,6 +14,7 @@ jqRaw=1
 minify=1
 
 iclass=""
+iclassFilter=""
 
 tfile="$( dirname ${0} )/tables.yml"
 

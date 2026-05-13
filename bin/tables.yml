@@ -63,7 +63,7 @@ classes:
           - [  30,  40,  53 ]
 
   boots:
-    - names: [ "eleven", "kicking" ]
+    - names: [ "eleven", "kicking", "low" ]
       sell: [ 3, 4 ]
       buy:
         base: 8
@@ -103,6 +103,18 @@ classes:
           - [  34,  55,  59 ]
           - [  25,  33,  44 ]
 
+    - names: [ "high_boots", "jackboots" ]
+      sell: [ -1 ]
+      buy:
+        base: 12
+        cha:
+          - [ 12 ]
+          - [ 12 ]
+          - [ 12 ]
+          - [ 12 ]
+          - [ 12 ]
+          - [ 12 ]
+          - [ 12 ]
 
   scrolls:
     - names: ["identify"]

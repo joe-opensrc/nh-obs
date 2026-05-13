@@ -11,6 +11,7 @@ namesOnly=1
 jqArgs=()
 jqFlat=0
 jqRaw=1
+minify=1
 
 iclass=""
 

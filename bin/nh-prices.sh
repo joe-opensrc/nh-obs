@@ -27,6 +27,21 @@ debug() {
   } >&2
 }
 
+# used in call to jq to remove possible items from the item class name lists
+iclass_filter() {
+
+  # if already in '["foo","bar"]' format
+  # passthru. otherwise: add some '[""]'
+  # basic check; 'cos regexes ;)
+  if [[ "${1}" =~ \[.*\] ]]
+  then
+    echo "${1}"
+  else
+    echo "[${1}]" | sed -e 's/^\[/\["/' -e 's/,/","/g' -e 's/\]$/"]/'
+  fi
+
+}
+
 index=
 OPTIND=1 OPTARG="" OPTERR=0
 while getopts 'Cb:c:i:I:s:mnrj' flag

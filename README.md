@@ -75,4 +75,10 @@ They're for NetHack v3.6.7+.
 # shows scrolls that have buy-price 27 zorkmids
 > nh-prices.sh -i scrolls -c 11 -b 27
 {"names":["identify"],"pindex":1,"prices":[20,27,36]}
+
+# filters out names to help narrow down possibilities
+# from those being returned
+> nh-prices.sh -i scrolls -c 12 -b 107 -f enchant_weapon
+{"names":["blank"],"pindex":2,"prices":[60,80,107]}
+{"names":["enchant_armor","remove_curse"],"pindex":1,"prices":[80,107,142]}
 ```

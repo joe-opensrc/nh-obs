@@ -76,6 +76,14 @@ then
 fi
 
 yqOutFilter=""
+names="names"
+
+# filter out any specified item names
+if [[ -n "${iclassFilter}" ]]
+then
+  names="names: ( .names - "${iclassFilter}" )"
+fi
+
 if [[ ${namesOnly} -eq 0 ]]
 then
   if [[ ${jqRaw} -eq 0 ]]
@@ -86,27 +94,25 @@ then
   fi
 fi
 
-yqFilter=".classes[${iclass}][] | { sell, names }"
+yqFilter=".classes[${iclass}][] | { sell, ${names} }"
 
 if [[ ${cha} -gt 0 ]]
 then
-
 
   if [[ ${sprice} -lt 0 && ${bprice} -lt 0 ]]
   then
     yqFilter="
       (.charisma[] | select( ${cha} >= .minimum and ${cha} <= .maximum ).index ) as \$cind
         | .classes[${iclass}][]
-        | { names, prices: .buy.cha[\$cind] }"
+        | { ${names}, prices: .buy.cha[\$cind] }"
   else
       yqFilter="
       (.charisma[] | select( ${cha} >= .minimum and ${cha} <= .maximum ).index ) as \$cind |
         ( .classes[${iclass}][]
             | select( .buy.cha[\$cind]
             | contains([${bprice}]) )
-        ) | { names, pindex: ( .buy.cha[\$cind] | index(${bprice}) ), prices: .buy.cha[\$cind] }"
+        ) | { ${names}, pindex: ( .buy.cha[\$cind] | index(${bprice}) ), prices: .buy.cha[\$cind] }"
     fi
-
 
 else
 
@@ -119,7 +125,7 @@ else
 
   if [[ ${sprice} -gt 1 ]]
   then
-    yqFilter=".classes[${iclass}][] | select(.sell | contains([${sprice}]) ) | { names, prices: .sell }"
+    yqFilter=".classes[${iclass}][] | select(.sell | contains([${sprice}]) ) | { ${names}, prices: .sell }"
   fi
 
 fi

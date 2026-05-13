@@ -13,6 +13,9 @@
     Now with: nh-prices.sh
     ( a script to help with price identification of items )
 
+    Now with: nh-prayer.sh
+    ( a script to advise when it is again safe to pray )
+
 ### INSTALL
 ___
 

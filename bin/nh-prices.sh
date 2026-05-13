@@ -77,7 +77,6 @@ then
 
   if [[ ${sprice} -lt 0 && ${bprice} -lt 0 ]]
   then
-    # yqFilter="(.charisma[] | select( ${cha} >= .minimum and ${cha} <= .maximum ).index ) as \$cind | .classes[${iclass}][] | { names, cha: \"${cha}\", prices: .buy.cha[\$cind] }"
     yqFilter="(.charisma[] | select( ${cha} >= .minimum and ${cha} <= .maximum ).index ) as \$cind | .classes[${iclass}][] | { names, prices: .buy.cha[\$cind] }"
   else
     

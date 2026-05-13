@@ -28,7 +28,7 @@ debug() {
 
 index=
 OPTIND=1 OPTARG="" OPTERR=0
-while getopts 'Cb:c:i:I:s:nrj' flag
+while getopts 'Cb:c:i:I:s:mnrj' flag
 do
   case "${flag}" in
     C) yq -rc '.classes | keys[]' "${tfile}"; exit 0;;
@@ -39,6 +39,7 @@ do
     j) jqArgs+=( -j ); jqFlat=1;;
     r) jqArgs+=( -r ); jqRaw=0;;
     n) namesOnly=0;; 
+    m) minify=0;;
     s) sprice=${OPTARG};;
   esac
 done
